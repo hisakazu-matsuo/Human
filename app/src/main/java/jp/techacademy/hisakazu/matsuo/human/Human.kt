@@ -6,8 +6,9 @@ import android.util.Log
 import java.util.*
 
 open class Human: Animal, Thinkable {
+
     //引数付きコンストラクタ
-    constructor(name: String="`松尾寿一", age: Int=62) : super(name, age) {
+    constructor(name: String="`松尾寿一", age: Int=62, hobby: String ="Golf") : super(name, age, hobby) {
 
        }
 
@@ -21,8 +22,8 @@ open class Human: Animal, Thinkable {
 
     //Thinkableクラスのメソッドをオーバーライド
     override fun think() {
-        val hobby= "Golf"
-        Log.d("kotlintest","私は" +hobby  +"について考える。")
+        //val hobby= "Golf"
+        Log.d("kotlintest","私は" +this.hobby  +"について考える。")
     }
 
 
